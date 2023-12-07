@@ -84,10 +84,8 @@ class TCompound(TargetNode):
         c.box = BoundingBox.loadByLtwhDict(data["position"])
         c.cdxml = data.get("cdxml")
         c.text = data.get("text")
-        c.mw = data.get("MW")
         c.img = data.get("img")
         c.svg = data.get("svg")
-        c.inchikey = data.get("inchikey")
         return c
 
     def __init__(self, docObj, tag: str, semantics: str, isCollection: bool = False, img: str = None, text: str = None) -> None:
@@ -96,8 +94,6 @@ class TCompound(TargetNode):
         self.img = img
         self.svg = None
         self.text = text
-        self.inchikey = None
-        self.mw = None
         if docObj and docObj.xmlElement.tagName == "fragment":
             self.cdxml = docObj.xmlStr
         else:
@@ -124,8 +120,6 @@ class TCompound(TargetNode):
             "svg": self.svg,
             "text": self.text,
             "cdxml": self.cdxml if withCdxml else "",
-            "inchikey": self.inchikey,
-            "MW": self.mw,
             "child": self.childDict
         }
         if withPosition:

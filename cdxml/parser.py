@@ -103,12 +103,6 @@ class CdxmlParser:
                 tags.append(c.tag)
                 xmls.append(fragment.xmlStr)
 
-        # 批量查询，补充inchikey, MW分子量
-        # infos = self.getInchikeysAndMwsByFragments(xmls)
-        # for i, (inchikey, mw) in enumerate(infos):
-        #     self._compounds[tags[i]].inchikey = inchikey
-        #     self._compounds[tags[i]].mw = mw
-
     def _parsePlusSymbols(self):
         # Plus symbol text
         textNodes = []

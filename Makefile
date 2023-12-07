@@ -1,4 +1,4 @@
-.PHONY: build test
+.PHONY: test
 
 install:
 	@pip install --no-cache-dir -r requirements.txt
@@ -7,6 +7,7 @@ install:
 
 test:
 	@python -m unittest discover -v -p *_test.py 
+	@make clean
 
 clean:
 	@rm -r build || true
