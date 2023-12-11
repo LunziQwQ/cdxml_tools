@@ -6,7 +6,7 @@ A hypothetical usage scenario is to generate automated chemical experiment workf
 ![](demo.jpeg)
 
 # Dependency[Optional]
-The tool is based on pure Python. If you want the debug png feature. Need to install the following packages:
+The tool is based on pure Python. If you want the debug png feature, you need to install the following packages:
 * Pillow
 * wand
 
@@ -32,10 +32,11 @@ parseResult, img = parseCdxml(
 )
 ```
 
-# Others
+# License
 The tools used the MIT license. Because the principle is a simple data converter. If you want to extend the feature or learn more about `cdxml`, highly recommend this article([CDXML format introduction](https://depth-first.com/articles/2021/04/07/an-introduction-to-the-chemdraw-cdxml-format/)). 
 
 Also welcome to submit issue or pull request :)
 
-# Contact
-* me@lunzi.space
+# Plan
+* add builder doc
+* support configuration about graphical recognition rules
